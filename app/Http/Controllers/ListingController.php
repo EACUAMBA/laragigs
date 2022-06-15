@@ -12,7 +12,7 @@ class ListingController extends Controller
     public function index()
     {
         return view('listings.index', [
-            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->paginate(4)
         ]);
     }
 
@@ -33,7 +33,6 @@ class ListingController extends Controller
     //Store listing data
     public function store(Request $request)
     {
-
         //Fazendo a validação dos campos.
         $formFields = $request->validate([
             'title' => 'required',

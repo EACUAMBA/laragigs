@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Pagination\Paginator;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -25,7 +26,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-        //Permitira o massive assignment sem precisarmos do $fillable.
+        //Permitira o massive assignment sem precisarmos do $fallible.
         Model::unguard();
+        //Para mudar a disposição da paginação
+        Paginator::useBootstrap();
     }
 }

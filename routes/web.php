@@ -25,7 +25,7 @@ use App\Models\Listing;
 // destroy - Delete listing
 
 //All Listing
-Route::get('/', [ListingController::class, 'index']);
+Route::get('/', [ListingController::class, 'index'])->name('listings.index');
 
 //Show create form
 Route::get('/listings/create', [ListingController::class, 'create'])->name('listings.create');
@@ -35,7 +35,7 @@ Route::post('/listings/', [ListingController::class, 'store'])->name('listings.s
 
 
 //Single Listing
-Route::get('/listings/{listing}', [ListingController::class, 'show']);
+Route::get('/listings/{listing}', [ListingController::class, 'show'])->name('listings.show');
 
 
 
