@@ -33,6 +33,11 @@ Route::get('/listings/create', [ListingController::class, 'create'])->name('list
 //Store Listing Data
 Route::post('/listings/', [ListingController::class, 'store'])->name('listings.store');
 
+//Show edit form
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->name('listings.edit');
+
+//Edit submit to update
+Route::put('/listings/{listing}', [ListingController::class, 'update'])->name('listings.update');
 
 //Single Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show'])->name('listings.show');
