@@ -24,6 +24,7 @@
             },
         };
     </script>
+    <script src="//unpkg.com/alpinejs" defer></script>
     <title>LaraGigs | Find Laravel Jobs & Projects</title>
 </head>
 <body class="mb-48">
