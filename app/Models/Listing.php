@@ -9,6 +9,9 @@ class Listing extends Model
 {
     use HasFactory;
 
+    //Precisamos de informar ao eloquente que campos queremos que seja possível preenchermos no formulário.
+    protected $fillable = ['title', 'company', 'location', 'website', 'email', 'tags', 'description'];
+
     public function scopeFilter($query, array $filters)
     {
         //Esta instrição verifica se temos uma tag na variavel $filters, se tivermos ela é true e se não ela é false e vai para o else.
