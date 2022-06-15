@@ -29,6 +29,6 @@ class AppServiceProvider extends ServiceProvider
         //Permitira o massive assignment sem precisarmos do $fallible.
         Model::unguard();
         //Para mudar a disposição da paginação
-        Paginator::useBootstrap();
+        Paginator::useTailwind();
     }
 }

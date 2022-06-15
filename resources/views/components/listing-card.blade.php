@@ -5,8 +5,8 @@
     <div class="flex">
         <img
             class="hidden w-48 mr-6 md:block"
-            src="{{asset('images/no-image.png')}}"
-            alt=""
+            src="{{$listing->logo ? Illuminate\Support\Facades\Storage::url($listing->logo) : asset('images/no-image.png')}}"
+            alt="{{$listing->title}}"
         />
         <div>
             <h3 class="text-2xl">

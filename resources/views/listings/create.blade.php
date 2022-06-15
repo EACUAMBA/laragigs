@@ -7,7 +7,8 @@
         <p class="mb-4">Post a gig to find a developer</p>
     </header>
 
-    <form action="{{ route('listings.store') }}" method="post">
+{{--    Para fazer upload de arquivos devemos colocar como multipart/form-data--}}
+    <form action="{{ route('listings.store') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="mb-6">
             <label
