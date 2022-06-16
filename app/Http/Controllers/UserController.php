@@ -35,5 +35,16 @@ class UserController extends Controller
 
     }
 
+    //Logout
+    public function logout(Request $request){
+        Auth::logout();
+
+        //
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect(route('listings.index'))->with('message', 'You have been logout@');
+    }
+
 
 }

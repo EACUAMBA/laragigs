@@ -46,12 +46,14 @@
                 >
             </li>
             <li>
-                <form action="" class="inline" method="POST">
+                <form action="{{ route('users.logout') }}" class="inline" method="POST">
                     @csrf
-                    
+                    <button type="submit">
+                        <i class="fa-solid fa-door-closed"></i>
+                    </button>
                 </form>
             </li>
-        @elseauth()
+        @else
         <li>
             <a href="{{ route('users.register') }}" class="hover:text-laravel"
             ><i class="fa-solid fa-gear"></i> Register</a
