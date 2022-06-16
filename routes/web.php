@@ -42,6 +42,8 @@ Route::put('/listings/{listing}', [ListingController::class, 'update'])->name('l
 //Single Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show'])->name('listings.show');
 
+//Delete listing
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->name('listings.delete');
 
 
 //Route::get('/hello', function (){
