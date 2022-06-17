@@ -45,6 +45,8 @@ class ListingController extends Controller
             'description' => 'required'
         ]);
 
+        $formFields['user_id'] = auth()->id();
+
         if($request->hasFile('logo')){
             $formFields['logo'] = $request->file('logo')->store('logos',  'public');
         }
@@ -63,7 +65,7 @@ class ListingController extends Controller
         //Fazendo a validação dos campos.
         $formFields = $request->validate([
             'title' => 'required',
-            //Se quisermos que um campo seja unique no banco de dados podemos usar Rule::unique para isso.
+
             'company' => ['required'],
             'location' => 'required',
             'website' => 'required',
