@@ -1,5 +1,5 @@
 # Laragigs
-Projecto realizado com base no video [aravel From Scratch 2022 | 4+ Hour Course](https://youtu.be/MYyJ4PuL4pY)
+Projecto realizado com base no video [Laravel From Scratch 2022 | 4+ Hour Course](https://youtu.be/MYyJ4PuL4pY)
 
 ## Comandos usados neste curso:
 1. **composer global laravel/installer** -> Utilizado para instalar o criador de projectos laravel na sua máquina de forma global.
@@ -11,3 +11,5 @@ Projecto realizado com base no video [aravel From Scratch 2022 | 4+ Hour Course]
 7. **php artisan make:controller ControllerName** -> Cria um controller na pasta /app/Http/Controllers/ com o nome ControllerName.php;
 8. **php artisan storage:link** -> Cria uma symlink na pasta public que aponta para a pasta /storage/app
 9. **php artisan vendor:publish** -> Publica algumas features para podermos personalizar como paginação e outras coisas.
+10. **php artisan tinker** -> Com esse comando podemos executar funções de classes php para testes, devemos passar o namespace da classe e a função que desejamos executar.
+    1. ![Imagem mostrando o tinker em ac ção](./public/images/acessando-o-tinker.png)
