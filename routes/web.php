@@ -27,7 +27,6 @@ use App\Models\Listing;
 
 //All Listing
 Route::get('/', [ListingController::class, 'index'])->name('listings.index');
-Route::get('/man', [ListingController::class, 'index'])->name('listings.manage');
 
 //Show create form
 Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth')->name('listings.create');
@@ -40,6 +39,9 @@ Route::get('/listings/{listing}/edit', [ListingController::class, 'edit'])->midd
 
 //Edit submit to update
 Route::put('/listings/{listing}', [ListingController::class, 'update'])->middleware('auth')->name('listings.update');
+
+//Manage listings
+Route::get('/listings/manage', [ListingController::class, 'manage'])->middleware('auth')->name('listings.manage');
 
 //Single Listing
 Route::get('/listings/{listing}', [ListingController::class, 'show'])->name('listings.show');
@@ -62,6 +64,8 @@ Route::get('/login', [UserController::class, 'login'])->middleware('guest')->nam
 
 //Login the user
 Route::post('/users/authenticate', [UserController::class, 'authenticate'])->middleware('guest')->name('users.authenticate');
+
+
 
 
 //Route::get('/hello', function (){

@@ -32,7 +32,7 @@
                 </div>
             </div>
         </x-card>
-        <x-card class="mt-4 p-3 flex space-x-6">
+        <x-card class="mt-4 p-3 flex space-x-6 invisible">
             <a href="{{ route('listings.edit', [$listing->id]) }}">
                 <i class="fa-solid fa-pencil"></i>
                 Edit
