@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     // Show register create form
     public function create(){
-        return view('user.register');
+        return view('users.register');
     }
 
     //Create new User
@@ -43,7 +43,27 @@ class UserController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect(route('listings.index'))->with('message', 'You have been logout@');
+        return redirect(route('listings.index'))->with('message', 'You have been logout!');
+    }
+
+    //Show login form
+    public function login(){
+        return view('users.login');
+    }
+
+    //Authenthicate user
+    public function authenticate(Request $request){
+        $formFields = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required']
+        ]);
+
+        if(Auth::attempt($formFields)){
+            $request->session()->regenerate();
+            return redirect(route('listings.index'))->with(['message' => 'you are logged in!']);
+        }else{
+            return back()->withErrors(['email'=> 'Invalid credencials']);
+        }
     }
 
 
