@@ -123,7 +123,7 @@
                     type="file"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="logo"
-                    value="{{ $listing->logo }}"
+                    value="{{$listing->logo ? Illuminate\Support\Facades\Storage::url($listing->logo) : asset('images/no-image.png')}}"
                 />
                 @error('logo')
                 <p class="text-red-500 text-xs mt-1">{{$message}}</p>
