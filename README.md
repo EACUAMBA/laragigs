@@ -1,6 +1,7 @@
 # Laragigs
 Projecto realizado com base no video [Laravel From Scratch 2022 | 4+ Hour Course](https://youtu.be/MYyJ4PuL4pY)
-
+## Screenshot
+![Primeira página do site](./public/images/first-page.png)
 ## Comandos usados neste curso:
 1. **composer global require laravel/installer** -> Utilizado para instalar o criador de projectos laravel na sua máquina de forma global.
 2. **laravel new projectName** -> cria um projecto laravel na pasta com o nome projectNew, no directorio actual.
